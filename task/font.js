@@ -1,0 +1,22 @@
+const { src, dest } = require('gulp');
+
+//Конфигурация
+const path = require('../config/pach.js');
+const app = require('../config/app.js');
+
+//Плагины
+const newer = require('gulp-newer'); 
+const fonter = require('gulp-fonter');
+const ttf2woff2 = require('gulp-ttf2woff2');
+
+//Обработка font
+const font = function () {
+    return src(path.font.src)
+        .pipe(newer(path.font.dest))
+        .pipe(fonter(app.fonter))
+        .pipe(dest(path.font.dest))
+        .pipe(ttf2woff2())
+        .pipe(dest(path.font.dest));
+};
+
+module.exports = font;
