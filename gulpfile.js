@@ -28,7 +28,7 @@ const watcher = function() {
     watch(path.scss.watch, scss).on('all', browserSync.reload);
     watch(path.js.watch, js).on('all', browserSync.reload);
     watch(path.img.watch, img).on('all', browserSync.reload);
-    watch(path.img.watch, font).on('all', browserSync.reload);
+    watch(path.font.watch, font).on('all', browserSync.reload);
 };
 
 const build = series (
