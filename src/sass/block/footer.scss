@@ -1,0 +1,35 @@
+.footer {
+    min-height: 141px;
+    margin-bottom: 38px;
+
+    .footer__wrapper {
+        min-height: 141px;
+        display: flex;
+        margin-left: 63px;
+    }
+
+    .footer__list {
+        align-items: center;
+        display: flex;
+
+        .footer__item a {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 17px;
+            text-transform: uppercase;
+            color: $main-color-text;
+
+            @extend %transition
+        }
+
+        .footer__item a:hover,
+        .footer__item a:active,
+        .footer__item a:focus {
+            color: $btn-color;
+        }
+
+        .footer__item:not(:last-child) {
+            margin-right: 94px;
+        }
+    }
+}

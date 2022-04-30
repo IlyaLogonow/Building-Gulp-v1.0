@@ -33,7 +33,7 @@ const watcher = function() {
 
 const build = series (
     clear,
-    parallel(pug, scss, js, img, font),
+    parallel(pug, scss, js, img, font)
 );
 
 const dev = series (
